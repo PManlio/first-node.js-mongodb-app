@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><!--le librerie jQuery sono le prime che devi mettere, prima di ogni cosa -->
+  <script src="http://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+  <script src="/assets/todo-list.js"></script>
+  <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+  <title>Todo List</title>
+
+</head>
+<!-- per la tesi controlla il video num 34, verso 5:20 -->
+<body>
+  <div id="todo-table">
+    <form>
+      <input type="text" name="item" placeholder="Add new item..." required />
+      <button type="submit" method=POST>Add Item</button>
+    </form>
+    <ul>
+      <% for(var i=0; i < todos.length; i++){ %>
+        <li><%= todos[i].item %></li>
+      <% } %>
+    </ul>
+  </div>
+</body>
+</html>
